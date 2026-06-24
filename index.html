@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sisters in the Park – Olmos Park, San Antonio</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:      #1a1118;
+      --cream:    #f5f0ea;
+      --plum:     #4a1f45;
+      --gold:     #b8943a;
+      --silver:   #9ca3a8;
+      --red:      #c0271a;
+      --yellow:   #f0c832;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* ── Header ── */
+    header {
+      width: 100%;
+      background: #63C5DA;
+      text-align: center;
+      padding: 3.5rem 2rem 4.5rem;
+    }
+
+    header .eyebrow {
+      font-family: 'Jost', sans-serif;
+      font-weight: 400;
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 1rem;
+    }
+
+    header h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.4rem, 7vw, 4.2rem);
+      font-weight: 400;
+      color: var(--cream);
+      line-height: 1.1;
+      letter-spacing: 0.03em;
+    }
+
+    header .rule {
+      width: 4rem;
+      height: 3px;
+      background: var(--yellow);
+      margin: 1.4rem auto 0;
+    }
+
+    /* ── Main ── */
+    main {
+      width: 100%;
+      max-width: 640px;
+      padding: 3rem 2rem 4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2.8rem;
+    }
+
+    .about p {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.25rem;
+      line-height: 1.75;
+      color: var(--plum);
+      text-align: center;
+    }
+
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: var(--silver);
+      opacity: 0.4;
+    }
+
+    .info-block {
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+      align-items: center;
+      text-align: center;
+    }
+
+    .info-block .label {
+      font-size: 0.65rem;
+      font-weight: 400;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .info-block address {
+      font-style: normal;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: var(--ink);
+    }
+
+    .info-block address a {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px solid var(--silver);
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .info-block address a:hover {
+      color: var(--plum);
+      border-color: var(--plum);
+    }
+
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.6rem;
+    }
+
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.82rem;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      color: var(--plum);
+      text-decoration: none;
+      border: 1px solid var(--plum);
+      padding: 0.6rem 1.1rem;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .social-link:hover {
+      background: var(--plum);
+      color: var(--cream);
+    }
+
+    .social-link svg {
+      width: 15px;
+      height: 15px;
+      flex-shrink: 0;
+    }
+
+    /* ── Hero image ── */
+    .hero-photo-wrap {
+      display: flex;
+      justify-content: center;
+      margin-top: -70px;
+      margin-bottom: -10px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .hero-photo {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      border: 4px solid var(--cream);
+      box-shadow: 0 4px 18px rgba(26,17,24,0.18);
+    }
+
+    /* ── Footer ── */
+    footer {
+      margin-top: auto;
+      padding: 1.4rem 2rem;
+      font-size: 0.7rem;
+      color: var(--silver);
+      letter-spacing: 0.08em;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <p class="eyebrow">Olmos Park &nbsp;·&nbsp; San Antonio, TX</p>
+    <h1>Sisters in the Park</h1>
+    <div class="rule"></div>
+  </header>
+
+  <div class="hero-photo-wrap">
+    <img class="hero-photo" src="Early_Sisters.jpg" alt="The sisters as young children" />
+  </div>
+
+  <main>
+
+    <section class="about">
+      <p>A jewel box of a shop created for interested and interesting shoppers. A beautifully curated selection of vintage and new clothes and accessories — folk art, Texana, MCM art glass, sterling silver from Mexico, and more.</p>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="info-block">
+      <span class="label">Find Us</span>
+      <address>
+        <a href="https://www.bing.com/maps/default.aspx?v=2&pc=FACEBK&mid=8100&where1=4211%20McCullough%20Ave.%2C%20Olmos%20Park%2C%20TX%2C%20United%20States%2C%2078212&FORM=FBKPL1&mkt=en-US" target="_blank" rel="noopener">
+          4211 McCullough Ave.<br>
+          Olmos Park, TX 78212
+        </a>
+      </address>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="info-block">
+      <span class="label">Contact</span>
+      <address>
+        <a href="tel:+12103935477">(210) 393-5477</a><br>
+        <a href="mailto:sistersinthepark2023@gmail.com">sistersinthepark2023@gmail.com</a>
+      </address>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="info-block">
+      <span class="label">Find Us Online</span>
+      <div class="social-links">
+
+        <a class="social-link" href="https://www.facebook.com/profile.php?id=61552955784639" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+          </svg>
+          Facebook
+        </a>
+
+        <a class="social-link" href="https://www.instagram.com/sistersinthepark/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+          </svg>
+          Instagram
+        </a>
+
+        <a class="social-link" href="https://www.yelp.com/biz/sisters-in-the-park-san-antonio-2?osq=sisters+in+the+park" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12.5 2.6c-.4-.8-1.6-.8-2 0l-2.4 4.8-5.3.8c-.9.1-1.3 1.2-.6 1.8l3.8 3.7-.9 5.3c-.2.9.8 1.6 1.6 1.1L12 17.6l4.8 2.5c.8.4 1.7-.2 1.6-1.1l-.9-5.3 3.8-3.7c.7-.6.3-1.7-.6-1.8l-5.3-.8-2.4-4.8z"/>
+          </svg>
+          Yelp
+        </a>
+
+        <a class="social-link" href="https://www.google.com/maps/search/Sisters+in+the+Park+San+Antonio+TX" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+          </svg>
+          Google Reviews
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>© Sisters in the Park</footer>
+
+</body>
+</html>
