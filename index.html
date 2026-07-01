@@ -38,12 +38,16 @@
       padding: 2rem 2rem 4.5rem;
     }
 
-    .header-illustration {
+    .header-illustration-wrap {
+      width: 100%;
       max-width: 500px;
+      margin: 0 auto 0.8rem;
+    }
+
+    .header-illustration {
       width: 100%;
       height: auto;
       display: block;
-      margin: 0 auto 0.8rem;
     }
 
     header .eyebrow {
@@ -227,7 +231,9 @@
 <body>
 
   <header>
-    <img class="header-illustration" src="Sisters in the Park - Back of GC.jpg" alt="Sisters in the Park" />
+    <div class="header-illustration-wrap">
+      <img class="header-illustration" src="Sisters in the Park - Back of GC.jpg" alt="Sisters in the Park" />
+    </div>
     <p class="eyebrow">Olmos Park, TX &nbsp;(San Antonio)</p>
   </header>
 
